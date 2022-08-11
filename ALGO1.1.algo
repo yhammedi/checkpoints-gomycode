@@ -1,0 +1,28 @@
+ALGORITHM algorithm_number
+VAR
+    SENTENCE:STRING
+    nb_of_c:INTEGER
+    nb_of_words:INTEGER:=1
+    i:INTEGER
+    nb_of_vowels:INTEGER:=0
+    SENTENCE:CHAR
+BEGIN
+    REPEAT
+    Read(SENTENCE)
+    UNTIL (SENTENCE[length(SENTENCE)-1]=".")
+    nb_of_c:=length(SENTENCE)
+    Write(nb_of_c)
+    FOR i FROM 0 TO length(SENTENCE)-1 STEP 1 DO
+    IF (SENTENCE[i]=" ") THEN
+    nb_of_words=nb_of_words+1
+    END_IF
+    IF (SENTENCE[i]=between a and z) THEN
+        IF(SENTENCE[i]is a,e,i,o,u)
+        nb_of_vowels=nb_of_vowels+1
+    ELSE
+      consonants=consonants+1
+    END_IF
+    END_FOR
+    Write(nb_of_words)
+    Write(nb_of_vowels)
+END
